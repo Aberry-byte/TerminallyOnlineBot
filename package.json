@@ -1,0 +1,23 @@
+{
+  "name": "terminallyonlinebot",
+  "version": "1.0.0",
+  "description": "Discord bot that is terminally online",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aberry-byte/TerminallyOnlineBot.git"
+  },
+  "author": "Alex Huft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aberry-byte/TerminallyOnlineBot/issues"
+  },
+  "homepage": "https://github.com/Aberry-byte/TerminallyOnlineBot#readme",
+  "dependencies": {
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3"
+  }
+}
