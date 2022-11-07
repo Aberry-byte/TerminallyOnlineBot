@@ -7,7 +7,8 @@ const { Client, Events, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [
     GatewayIntentBits.Guilds, 
     GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent]
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMessageReactions]
 });
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
@@ -18,6 +19,7 @@ client.once(Events.ClientReady, c => {
 client.login(process.env.TOKEN);
 
 // Get messages
+/*
 client.on(Events.MessageCreate, gotMessage);
 
 function gotMessage(message)
@@ -32,5 +34,14 @@ function gotMessage(message)
             .then(() => console.log(`Replied to message "${message.content}"`))
             .catch(console.error);;
     }
+}
+*/
+
+// Check for reactions
+client.on(Events.MessageReactionAdd, reactionAdded)
+
+function reactionAdded(reaction, user)
+{
+    console.log(`${user.id} added reaction ${reaction}`)
 }
 
